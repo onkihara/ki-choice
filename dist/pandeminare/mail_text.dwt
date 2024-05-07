@@ -1,0 +1,45 @@
+﻿<!-- TemplateBeginIf cond="v_mailtype==info" --><!--LOC-->Anmeldung zu<!--LOC--> "<!-- TemplateBeginEditable name="v_event::Title" -->title<!-- TemplateEndEditable -->"<!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+<!--LOC-->Vielen Dank für Ihr Interesse an<!--LOC--> "<!-- TemplateBeginEditable name="v_event::Title" --><!-- TemplateEndEditable -->".
+
+<!--LOC-->Veranstaltungsdaten<!--LOC-->:
+<!--LOC-->Veranstaltung<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Title" --><!-- TemplateEndEditable -->
+<!-- TemplateBeginIf cond="v_event::Address" --><!--LOC-->Adresse<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Address" --><!-- TemplateEndEditable --><!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="v_evebt::Place" --><!--LOC-->Ort<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Place" --><!-- TemplateEndEditable --><!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="v_latitude" --><!--LOC-->GPS-Koordinaten<!--LOC-->: <!--LOC-->Breitengrad<!--LOC-->: <!-- TemplateBeginEditable name="v_latitude" --><!-- TemplateEndEditable --> <!--LOC-->Längengrad<!--LOC-->: <!-- TemplateBeginEditable name="v_longitude" --><!-- TemplateEndEditable --><!-- TemplateEndIf -->
+<!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="v_mailtype==info" -->
+<!--LOC-->Anmeldedaten<!--LOC-->:
+
+<!--LOC-->Name<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Name" --><!-- TemplateEndEditable -->
+<!--LOC-->Vorname<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Firstname" --><!-- TemplateEndEditable -->
+<!--LOC-->E-Mail<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Email" --><!-- TemplateEndEditable -->
+<!--LOC-->Direktion / Organisation<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Organization" --><!-- TemplateEndEditable -->
+<!-- TemplateBeginIf cond="v_user::Telefon" --><!--LOC-->Telefon<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Telefon" --><!-- TemplateEndEditable --><!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="v_user::Allowance" --><!--LOC-->Erlaubnis der Vorgesetzten eingeholt<!--LOC--><!-- TemplateEndIf -->
+<!-- TemplateEndIf -->
+	
+<!-- TemplateBeginIf cond="v_mailtype==feedback" --><!--LOC-->Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:<!--LOC--><!-- TemplateEndIf -->
+				
+<!-- TemplateBeginIf cond="v_rworkshops" --><!--LOC-->Gebuchte Workshops:<!--LOC-->
+<!-- TemplateBeginEditable name="multiply|v_rworkshops" -->@@Short@@: @@Content@@, <!-- TemplateBeginIf cond="@@Start@@==true||literate" -->@@Start@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->@@Starttime@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->- @@Stop@@<!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" --><!-- TemplateBeginIf cond="@@Stop@@==false||literate" --> - <!-- TemplateEndIf -->@@Stoptime@@ <!-- TemplateEndIf -->
+<!-- TemplateEndEditable --><!-- TemplateEndIf -->
+
+<!-- TemplateBeginIf cond="v_mworkshops" --><!--LOC-->Auf Warteliste:<!--LOC-->
+<!-- TemplateBeginEditable name="multiply|v_mworkshops" -->@@Short@@: @@Content@@, <!-- TemplateBeginIf cond="@@Start@@==true||literate" -->@@Start@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->@@Starttime@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->- @@Stop@@<!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" --><!-- TemplateBeginIf cond="@@Stop@@==false||literate" --> - <!-- TemplateEndIf -->@@Stoptime@@ <!-- TemplateEndIf -->
+<!-- TemplateEndEditable --><!-- TemplateEndIf -->
+
+<!-- TemplateBeginIf cond="v_oworkshops" --><!--LOC-->Optionale Workshops:<!--LOC-->
+<!-- TemplateBeginEditable name="multiply|v_oworkshops" -->@@Short@@: @@Content@@, <!-- TemplateBeginIf cond="@@Start@@==true||literate" -->@@Start@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->@@Starttime@@ <!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->- @@Stop@@<!-- TemplateEndIf --><!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" --><!-- TemplateBeginIf cond="@@Stop@@==false||literate" --> - <!-- TemplateEndIf -->@@Stoptime@@ <!-- TemplateEndIf -->
+<!-- TemplateEndEditable --><!-- TemplateEndIf -->
+
+<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+<!--LOC-->EV_MAILINFOTXT<!--LOC-->
+<!--LOC-->Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:<!--LOC--> <!-- TemplateBeginEditable name="replace|addr|v_mailorganizator" -->@@addr@@<!-- TemplateEndEditable -->
+<!--LOC-->Mit freundlichen Grüßen<!--LOC-->
+"<!-- TemplateBeginEditable name="v_event::Title" -->title<!-- TemplateEndEditable -->"
+<!-- TemplateEndIf -->
+				
+<!--LOC-->P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung an:<!--LOC--> <!-- TemplateBeginEditable name="replace|addr|v_mailorganization" -->@@addr@@<!-- TemplateEndEditable -->.
+
+© <!--LOC-->Pädagogische Abteilung - Bozen<!--LOC--> (www.bildung.suedtirol.it)

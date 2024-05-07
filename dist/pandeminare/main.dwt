@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><!-- TemplateBeginEditable name="v_event::Title" -->titel<!-- TemplateEndEditable --></title>
+<link href="main.css" rel="stylesheet" type="text/css" />
+<script src="../../../blikk/scripts/scripts.js" type="text/javascript"></script>
+<script src="../../../blikk/scripts/transition.min.js" type="text/javascript"></script>
+<script src="main.js" type="text/javascript"></script>
+<!-- TemplateBeginIf cond="v_event::Route" -->
+<!-- TemplateBeginEditable name="replace|lat|v_route::lat|lon|v_route::lon|zoom|v_route::zoom|home|v_event::Home|la|v_lang" -->
+<script language="JavaScript" type="text/javascript">
+/* <![CDATA[ */
+	var maproutelat = @@lat@@; var maproutelon = @@lon@@; var maproutezoom = @@zoom@@; var maproutehome = '@@Home@@';
+/* ]]> */
+</script>
+<script src="https://maps.google.com/maps?file=api&amp;v=2&amp;hl=@@la@@&amp;key=ABQIAAAATnpW6n8WDoEKV8FKfkzv5hSWNASeJcRIBcyYucf8W86817SzuhTHTclEBAAbeRD7AdAVGHkQ5uqvlw" type="text/javascript"></script>
+<!-- TemplateEndEditable -->
+<!-- TemplateEndIf -->
+</head>
+
+<body onload="onLoad();" >
+
+    <div id="head" class="center">
+      <div id="logo"></div>
+      <div id="menu">
+      	
+	   		<h1><!-- TemplateBeginEditable name="v_event::Title" -->titel<!-- TemplateEndEditable --></h1>
+	   		<h3><!-- <!--LOC-->Anmeldeschluss:<!--LOC-->  <!-- TemplateBeginEditable name="v_datestop" --><!-- TemplateEndEditable --> --></h3>
+	   		
+		</div>
+			
+        <!-- TemplateBeginEditable name="replace|lg|v_lang" -->
+        <div id="smenu@@lg@@" class="smenu">
+            <h3 class="smenutitle"></h3>
+        </div>
+        <!-- TemplateEndEditable -->
+    
+    </div>
+   	
+   	<!-- TemplateBeginIf cond="part_form|false" -->
+    
+    <div id="main" class="center">
+    
+     	<!-- TemplateBeginIf cond="v_errmsg" -->
+	     	<!-- TemplateBeginIf cond="v_errmsg_1" -->
+	    		<p id="merrmsg" class="errmsg error"><!--LOC-->Achtung: Ihre Angaben sind unvollständig oder konnten nicht verarbeitet werden. Bitte überprüfen Sie die rot markierten Eingaben.<!--LOC--></p>
+	    	<!-- TemplateEndIf -->
+	     	<!-- TemplateBeginIf cond="v_errmsg_noworkshop" -->
+	    		<p id="merrmsg" class="errmsg error"><!--LOC-->Achtung: Sie haben keinen Workshop gewählt. Bitte überprüfen Sie Ihre Angaben.<!--LOC--></p>
+	    	<!-- TemplateEndIf -->
+	     	<!-- TemplateBeginIf cond="v_errmsg_closed" -->
+	    		<p id="merrmsg" class="errmsg error"><!--LOC-->Die Anmeldefrist für die Veranstaltung ist abgelaufen!<!--LOC--></p>
+	    	<!-- TemplateEndIf -->
+	     	<!-- TemplateBeginIf cond="v_errmsg_notopen" -->
+	    		<p id="merrmsg" class="errmsg error"><!--LOC-->Die Anmeldungen starten ab<!--LOC--> <!-- TemplateBeginEditable name="v_datestart" --><!-- TemplateEndEditable --></p>
+	    	<!-- TemplateEndIf -->
+    	<!-- TemplateEndIf -->
+    
+    	<!-- TemplateBeginEditable name="fform||v_action||true" -->
+    	<form id="mainform" name="mainform" action="" method="post" onsubmit="_blikk.inputClear(this,'cvoid');_blikk.layer.coverElements('isubmit','finish_load');">
+    	
+	     	<!-- TemplateBeginIf cond="v_data" -->
+	     	
+    		<div id="inputfields">
+    		
+	   			<h3><!--LOC-->Bitte geben Sie hier Ihre Anmeldedaten ein:<!--LOC--></h3>
+    	
+	   			<!-- TemplateBeginEditable name="ftextinput|||all|1|255|true|||cvoid" -->
+	    		<div id="fname">
+	    			<!-- fok -->
+	    				<input type="text" name="Name" id="iname" class="large" placeholder="#!--LOC--#Nachname#!--LOC--#" value="" />
+	    			<!-- fok -->
+	    			<!-- ferror -->
+	    				<input type="text" name="Name" id="iname" class="error large" placeholder="#!--LOC--#Nachname#!--LOC--#" value="" />
+	    			<!-- ferror -->
+	    			<span class="ev-mandatory">*</span>
+	    		</div>
+	    		<!-- TemplateEndEditable -->
+    	
+	   			<!-- TemplateBeginEditable name="ftextinput|||all|1|255|true|||cvoid" -->
+	    		<div id="ffirst">
+		    		<!-- fok -->
+		    			<input type="text" name="Firstname" id="ifirst" class="large" placeholder="#!--LOC--#Vorname#!--LOC--#" value="" />
+		    		<!-- fok -->
+		    		<!-- ferror -->
+		    			<input type="text" name="Firstname" id="ifirst" class="error large" placeholder="#!--LOC--#Vorname#!--LOC--#" value="" />
+		    		<!-- ferror -->
+		    		<span class="ev-mandatory">*</span>
+	    		</div>
+	    		<!-- TemplateEndEditable -->
+    	
+	   			<!-- TemplateBeginEditable name="ftextinput|||all|1|255|true|||cvoid" -->
+	    		<div id="forg">
+		    		<!-- fok -->
+		    			<input type="text" name="Option" id="iorg" class="large" placeholder="#!--LOC--#Direktion / Organisation#!--LOC--#"  value="" />
+		    		<!-- fok -->
+		    		<!-- ferror -->
+		    			<input type="text" name="Option" id="iorg" class="error large" placeholder="#!--LOC--#Direktion / Organisation#!--LOC--#"  value="" />
+		    		<!-- ferror -->
+		    		<span class="ev-mandatory">*</span>
+	    		</div>
+	    		<!-- TemplateEndEditable -->
+    	    	
+	   			<!-- TemplateBeginEditable name="ftextinput|||email|1|255|true|||cvoid" -->
+	    		<div id="femail">
+		    		<!-- fok -->
+		    			<input type="text" name="Email" id="iemail" class="large" placeholder="#!--LOC--#E-Mail#!--LOC--#"  value="" />
+		    		<!-- fok -->
+		    		<!-- ferror -->
+		    			<input type="text" name="Email" id="iemail" class="error large" placeholder="#!--LOC--#E-Mail#!--LOC--#"  value="" />
+		    		<!-- ferror -->
+		    		<span class="ev-mandatory">*</span>
+	    		</div>
+	    		<!-- TemplateEndEditable -->
+
+
+				<!-- TemplateBeginEditable name="fcaptcha||captchas" -->
+					<label for="captcha"><!--LOC-->Gib bitte diese Zeichen ein:<!--LOC-->
+						<!-- ferror --><span class="error"><br /><!--LOC-->Keine &Uuml;bereinstimmung, Gro&szlig;-Kleinschreibung beachten!<!--LOC--></span><!-- ferror -->
+					</label>
+					<img class="captcha" src="x" alt="Captcha" width="90" height="30" />
+					<!-- fok --><input class="" id="captcha" type="text" name="captcha" value="" /><!-- fok -->
+					<!-- ferror --><input class="error" id="captcha" type="text" name="captcha" value="" /><!-- ferror -->
+				<!-- TemplateEndEditable -->
+	    		
+    	
+    	
+    		</div>
+
+			<!-- TemplateEndIf -->
+    		
+    		<div id="anweisungen">
+    		
+    			<div id="description"><!-- TemplateBeginEditable name="v_event::Description" -->beschreibung<!-- TemplateEndEditable --></div>
+   				<!-- TemplateBeginIf cond="v_event::Home" -->
+   					<p id="home"><!-- TemplateBeginEditable name="link|v_event::Home|v_event::Home" --><a href="" title="#!--LOC--#Home#!--LOC--#">home</a><!-- TemplateEndEditable --></p>
+   				<!-- TemplateEndIf -->
+   				<!-- TemplateBeginIf cond="v_event::Address" -->
+   					<p id="address"><!-- TemplateBeginEditable name="v_event::Address" -->address<!-- TemplateEndEditable --></p>
+   				<!-- TemplateEndIf -->
+   				<!-- TemplateBeginIf cond="v_event::_Place" -->
+   					<p id="place"><!-- TemplateBeginEditable name="v_event::Place" -->place<!-- TemplateEndEditable --></p>
+   				<!-- TemplateEndIf -->
+   				<!-- TemplateBeginIf cond="v_event::Route" -->
+    					<div id="maproute"></div>
+   				<!-- TemplateEndIf -->
+				<p id="contacts"><!--LOC-->EV_CONTACTS<!--LOC--></p>
+				<p class="ev-mandatory-description"><span class="ev-mandatory">*</span> <!--LOC-->Pflichtfeld<!--LOC--></p>
+    		
+    		</div>
+    		
+    		<!-- TemplateBeginIf cond="v_workshops" -->
+    		
+    		<div id="workshops">
+    		
+    			<h2><!--LOC-->Referate und Workshops<!--LOC--></h2>
+    		
+    			<table class="tablews">
+    				<tr class="tablewshead">
+    					<th class="tf1"></th>
+    					<th class="tws"><!--LOC-->Nr.<!--LOC--></th>
+    					<th class="tws"><!--LOC-->Zeit<!--LOC--></th>
+    					<th class="tws"><!--LOC-->Referate und Workshops<!--LOC--></th>
+    					<th class="tas tshort"><!--LOC-->Anmelden<!--LOC--></th>
+    					<th class="tpl tshort"><!--LOC-->Plätze<!--LOC--></th>
+    					<th class="tbe tshort"><!--LOC-->Belegt<!--LOC--></th>
+	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+    					<th class="twa tshort"><!--LOC-->Auf Warteliste<!--LOC--></th>
+		    			<!-- TemplateEndIf -->
+    				</tr>
+    				
+    				<!-- TemplateBeginRepeat name="-|multiply|v_workshops" -->
+    				
+    				<!-- TemplateBeginIf cond="@@Type@@==1|false|literate" -->
+    				
+    					<!-- Type: CHOICE (1) -->
+    				
+    					<!-- TemplateBeginEditable name="replace|oe|v_oddeven|exerr|v_excludeerror_@@Id@@|gerr|v_grouperror_@@Id@@|ferr|v_fullerror_@@Id@@" -->
+	    				<tr class="tablewsrow wschoice @@oe@@ @@exerr@@ @@gerr@@" id="wsrow_@@Id@@">
+	    				<!-- TemplateEndEditable -->
+	    					<td class="tf1"></td>
+	    					<td class="tshort">@@Short@@</td>
+	    					<td class="tshort wstime">
+			    				<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+									<span class="wsstart">@@Start@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+									<span class="wsstarttime">@@Starttime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+									<span class="wsstop">@@Stop@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+										 - 	    						
+					    			<!-- TemplateEndIf -->
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+									<span class="wsstoptime">@@Stoptime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="ttitle">
+	    						<h4>@@Title@@</h4>
+			    				<!-- TemplateBeginIf cond="@@isDescription@@==true||literate" -->
+	    							<div>@@Description@@</div>
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="v_excludeerror_@@Id@@==exerror||literate" -->
+	    							<div class="error"><!--LOC-->Achtung: Diese Workshops können nicht gleichzeitig gebucht werden!<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="v_grouperror_@@Id@@==gerror||literate" -->
+	    							<div class="error"><!--LOC-->Achtung: Diese Workshops müssen zusammen belegt werden!<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="v_fullerror_@@Id@@==fullerror||literate" -->
+	    							<div class="error"><!--LOC-->Achtung: Dieser Workshops ist voll!<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="tshort">
+			    				<!-- TemplateBeginIf cond="@@Isfull@@==0|false|literate" -->
+			    					<div class="cinput"></div>
+		    						<!-- TemplateBeginEditable name="fcheckbox|Register_@@Id@@" -->
+		    							<input class="group group_@@Group@@ @@Exclude@@" type="checkbox" name="" id="fchreg_@@Id@@" value="1" />
+		    						<!-- TemplateEndEditable -->
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Isfull@@==1|false|literate" -->
+		    						<div><!--LOC-->Ausgebucht<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="tshort">@@Remain@@</td>
+	    					<td class="tshort">@@Registered@@</td>
+		    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	    					<td class="tshort"></td>
+			    			<!-- TemplateEndIf -->
+	    				</tr>
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==2|false|literate" -->
+    				
+    					<!-- Type: CHOICEMARK (2) -->
+    				
+    					<!-- TemplateBeginEditable name="replace|oe|v_oddeven|exerr|v_excludeerror_@@Id@@|gerr|v_grouperror_@@Id@@" -->
+	    				<tr class="tablewsrow wschoicemark @@oe@@ @@exerr@@ @@gerr@@" id="wsrow_@@Id@@">
+	    				<!-- TemplateEndEditable -->
+	    					<td class="tf1"></td>
+	    					<td class="tshort">@@Short@@</td>
+	    					<td class="tshort wstime">
+			    				<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+									<span class="wsstart">@@Start@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+									<span class="wsstarttime">@@Starttime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+									<span class="wsstop">@@Stop@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+										 - 	    						
+					    			<!-- TemplateEndIf -->
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+									<span class="wsstoptime">@@Stoptime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="ttitle">
+	    						<h4>@@Title@@</h4>
+			    				<!-- TemplateBeginIf cond="@@isDescription@@==true||literate" -->
+	    							<div>@@Description@@</div>
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="v_excludeerror_@@Id@@==exerror||literate" -->
+	    							<div class="error"><!--LOC-->Achtung: Diese Workshops können nicht gleichzeitig gebucht werden!<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="v_grouperror_@@Id@@==gerror||literate" -->
+	    							<div class="error"><!--LOC-->Achtung: Diese Workshops müssen zusammen belegt werden!<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="tshort">
+			    				<!-- TemplateBeginIf cond="@@Isfull@@==0|false|literate" -->
+			    					<div class="cinput"></div>
+		    						<!-- TemplateBeginEditable name="fcheckbox|Register_@@Id@@" -->
+		    							<input class="group group_@@Group@@ @@Exclude@@" type="checkbox" name="" id="fchreg_@@Id@@" value="1" />
+		    						<!-- TemplateEndEditable -->
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Isfull@@==1|false|literate" -->
+		    						<div><!--LOC-->Ausgebucht<!--LOC--></div>
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="tshort">@@Remain@@</td>
+	    					<td class="tshort">@@Registered@@</td>
+		    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	    					<td class="tshort">
+			    				<!-- TemplateBeginIf cond="@@Isfull@@==1|false|literate" -->
+		    						<!-- TemplateBeginEditable name="fcheckbox|Mark_@@Id@@" -->
+		    							<input type="checkbox" name="" id="fchmark_@@Id@@" value="1" />
+		    						<!-- TemplateEndEditable -->
+				    			<!-- TemplateEndIf -->
+	    					</td>
+			    			<!-- TemplateEndIf -->
+	    				</tr>
+	    				
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==4|false|literate" -->
+    				
+    					<!-- Type: HEADER (4) -->
+    				
+	    				<tr class="tablewsrow trheader">
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+		  						<td colspan="8" class="tdheader">
+		  							<h4>@@Title@@</h4>
+		  						</td>
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+		  						<td colspan="7" class="tdheader">
+		  							<h4>@@Title@@</h4>
+		  						</td>
+			    			<!-- TemplateEndIf -->
+ 	    				</tr>
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==5|false|literate" -->
+    				
+    					<!-- Type: SUBHEADER (5) -->
+    				
+	    				<tr class="tablewsrow trsubheader">
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	  							<td colspan="8" class="tdsubheader">
+	  								<h5>@@Title@@</h5>
+	  							</td>
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+	  							<td colspan="7" class="tdsubheader">
+	  								<h5>@@Title@@</h5>
+	  							</td>
+			    			<!-- TemplateEndIf -->
+ 	    				</tr>
+	    				
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==6|false|literate" -->
+    				
+    					<!-- Type: COMMENT (6) -->
+    				
+	    				<tr class="tablewsrow trcomment">
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	  							<td colspan="8" class="tdcomment">
+	  								<div>@@Description@@</div>
+	  							</td>
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+	  							<td colspan="7" class="tdcomment">
+	  								<div>@@Description@@</div>
+	  							</td>
+			    			<!-- TemplateEndIf -->
+ 	    				</tr>
+	    				
+	    			<!-- TemplateEndIf -->
+	    				
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==7|false|literate" -->
+    				
+    					<!-- Type: DIVIDER (7) -->
+    				
+	    				<tr class="tablewsrow trdivider">
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	  							<td colspan="8" class="tddivider"></td>
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+	  							<td colspan="7" class="tddivider"></td>
+			    			<!-- TemplateEndIf -->
+ 	    				</tr>
+	    				
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==20|false|literate" -->
+    				
+    					<!-- Type: OPEN (20) -->
+    				
+	    				<tr class="wstype-opener tablewsrow trheader" onclick="toggleClass(this,'open','wsopener-container-@@Id@@');return false;">
+	    					<td></td>
+	    					<td class="tshort">
+	    						<div class="ws-open-opener"></div>
+	    					</td>
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+		  						<td colspan="6" class="tdheader">
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+		  						<td colspan="5" class="tdheader">
+			    			<!-- TemplateEndIf -->
+		  							<h4>@@Title@@</h4>
+		  						</td>
+ 	    				</tr>
+
+ 	    				<tr class="wstype-opener-content">	    				
+	 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+		  						<td colspan="8">
+			    			<!-- TemplateEndIf -->
+	 	    				<!-- TemplateBeginIf cond="v_ismark==0" -->
+		  						<td colspan="7">
+			    			<!-- TemplateEndIf -->
+			    			<div id="wsopener-container-@@Id@@" class="wstype-opener-container">
+			    			<table class="tablews">
+
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==21|false|literate" -->
+    				
+    					<!-- Type: CLOSED (21) -->
+
+ 	    				    				
+
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateBeginIf cond="@@Type@@==22|false|literate" -->
+    				
+    					<!-- Type: SAPEVENT (22) -->
+    				
+    					<!-- TemplateBeginEditable name="replace|oe|v_oddeven|exerr|v_excludeerror_@@Id@@|gerr|v_grouperror_@@Id@@|ferr|v_fullerror_@@Id@@" -->
+	    				<tr class="tablewsrow wschoice @@oe@@ @@exerr@@ @@gerr@@" id="wsrow_@@Id@@">
+	    				<!-- TemplateEndEditable -->
+	    					<td class="tf1"></td>
+	    					<td class="tshort">@@Short@@</td>
+	    					<td class="tshort wstime">
+			    				<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+									<span class="wsstart">@@Start@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+									<span class="wsstarttime">@@Starttime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+									<span class="wsstop">@@Stop@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+										 - 	    						
+					    			<!-- TemplateEndIf -->
+				    			<!-- TemplateEndIf -->
+			    				<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+									<span class="wsstoptime">@@Stoptime@@</span> 	    						
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td class="ttitle">
+	    						<h4>@@Title@@</h4>
+			    				<!-- TemplateBeginIf cond="@@isDescription@@==true||literate" -->
+	    							<div>@@Description@@</div>
+				    			<!-- TemplateEndIf -->
+	    					</td>
+	    					<td colspan="3" class="tshort">
+	    						<a href="http://www.provinz.bz.it/fortbildungsportal" target="_blank">Anmeldungen nur über SAP SuccessFactors: http://www.provinz.bz.it/fortbildungsportal</a>
+	    					</td>
+		    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+	    					<td class="tshort"></td>
+			    			<!-- TemplateEndIf -->
+	    				</tr>
+	    			<!-- TemplateEndIf -->
+	    				
+    				<!-- TemplateEndRepeat -->
+    			
+    				<tr class="tablewsfoot">
+    					<td class="tl1"></td>
+    					<td class="tf"></td>
+    					<td class="tf"></td>
+    					<td class="tf"></td>
+    					<td class="tf tshort"></td>
+    					<td class="tf tshort"></td>
+    					<td class="tf tshort"></td>
+ 	    				<!-- TemplateBeginIf cond="v_ismark==1" -->
+    					<td class="tf tshort"></td>
+		    			<!-- TemplateEndIf -->
+    				</tr>
+    				
+    			</table>
+    		
+    		</div>
+    		
+    		<!-- TemplateEndIf -->
+    		
+ 	     	<!-- TemplateBeginIf cond="v_data" -->
+ 
+    		<div id="idisclaimer">
+    			<!-- TemplateBeginEdible name="fcheckbox|||1" -->
+    				<!-- ferror -->
+    				<div class="error" id="iddisclaimer">
+    				<!-- ferror -->
+    				<input name="Datenschutz" type="checkbox" id="ichdisclaimer" value="1" onclick="openDisclaimer(this);return false;" />
+    				<label for="ichdisclaimer" id="ildisclaimer"><!--LOC-->Ich nehme die Datenschutzerklärung zur Kenntnis!<!--LOC--><span class="ev-mandatory">*</span></label>
+    				<div id="disclaimer-content" style="display:none">
+    					<div class="disclaimer">
+    						<div><!--LOC-->EV_DISCLAIMER<!--LOC--></div>
+    						<div class="disclaimer-buttons">
+	    						<button id="disclaimer-ok" class="disclaimer-button" onclick="closeDisclaimer(true);"> <!--LOC-->OK<!--LOC--> </button>
+	    						<button id="disclaimer-cancel" class="disclaimer-button" onclick="closeDisclaimer(false)"><!--LOC-->Abbrechen<!--LOC--></button>
+	    					</div>
+    					</div>
+    				</div>
+    				<!-- ferror -->
+    				</div>
+    				<!-- ferror -->
+    			<!-- TemplateEndEditable -->
+    		</div>
+    		
+    		<p id="condition" class="fett"><!--LOC-->EV_CONDITION<!--LOC--></p>
+    		
+    		<div id="ibutton">
+    			<input name="finish" type="submit" id="isubmit" value="#!--LOC--#Anmelden#!--LOC--#" />
+    			<div id="finish_load" class="loader"><img src="img/loader.gif" alt="Bitte warten" /></div>
+    		</div>
+    	
+    		<!-- TemplateEndIf -->
+    		
+    	</form>
+    	<!-- TemplateEndEditable -->
+    </div>
+    
+    <!-- TemplateEndIf -->
+    
+    <!-- TemplateBeginIf cond="part_feedback|false" -->
+    
+    <div id="main" class="center feedback">
+    
+     	<!-- TemplateBeginIf cond="v_error_db" -->
+    		<p id="merrmsg" class="errmsg error"><!--LOC-->Entschuldigung! Aufgrund technischer Probleme kann Ihre Registrierung zur Zeit leider nicht entgegengenommen werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal.<!--LOC--></p>
+    	<!-- TemplateEndIf -->
+    	
+     	<!-- TemplateBeginIf cond="v_error_noreg" -->
+    		<p id="merrmsg" class="errmsg error"><!--LOC-->Ihre Registrierung enthält nicht alle notwendigen Teile - bitte überprüfe Sie Ihre Angaben.<!--LOC--></p>
+    	<!-- TemplateEndIf -->
+    	
+     	<!-- TemplateBeginIf cond="v_reloaded" -->
+    		<p id="merrmsg" class="errmsg error"><!--LOC-->Achtung: Sie haben das Formular schon abgeschickt! Für eine weitere Anmeldung benutzen Sie bitte den Knopf "Neue Anmeldung".<!--LOC--></p>
+    	<!-- TemplateEndIf -->
+    	
+     	<!-- TemplateBeginIf cond="v_registerok" -->
+     	
+     		<!-- TemplateBeginEditable name="replace|evtitle|v_event::Title" -->
+	    		<h2 class="success"><!--LOC-->Vielen Dank für Ihre Anmeldung zu<!--LOC--> "@@evtitle@@".</h2>
+	    		<h3 class="success"><!--LOC-->Sie haben sich erfolgreich für die angegebenen Workshops registriert und erhalten in Kürze eine E-Mail mit der Bestätigung Ihrer Registrierung: <!--LOC--></h3>
+    		<!-- TemplateEndEditable -->
+    		
+    		<div id="wslist">
+    		
+		     	<!-- TemplateBeginIf cond="v_rworkshops" -->
+		     		<h3 class="wstitle"><!--LOC-->Gebuchte Workshops:<!--LOC--></h3>
+		     		<!-- TemplateBeginEditable name="multiply|v_rworkshops" -->
+		     			<div class="wsliste">
+		     				<div class="wsitem wsshort">@@Short@@</div>
+		     				<div class="wsitem wsltitle">@@Content@@</div>
+		     				<div class="wsitem wstimes">
+						     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+			     					@@Start@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+			     					@@Starttime@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+			     					 - @@Stop@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+							     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				     					 - 
+							    	<!-- TemplateEndIf -->
+						    		@@Stoptime@@
+						    	<!-- TemplateEndIf -->
+					    	</div>
+		     			</div>
+		    		<!-- TemplateEndEditable -->
+		    	<!-- TemplateEndIf -->
+	    		
+		     	<!-- TemplateBeginIf cond="v_mworkshops" -->
+		     		<h3 class="wstitle"><!--LOC-->Auf der Warteliste:<!--LOC--></h3>
+		     		<!-- TemplateBeginEditable name="multiply|v_mworkshops" -->
+		     			<div class="wsliste">
+		     				<div class="wsitem wsshort">@@Short@@</div>
+		     				<div class="wsitem wsltitle">@@Content@@</div>
+		     				<div class="wsitem wstimes">
+						     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+			     					@@Start@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+			     					@@Starttime@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+			     					 - @@Stop@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+							     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				     					 - 
+							    	<!-- TemplateEndIf -->
+						    		@@Stoptime@@
+						    	<!-- TemplateEndIf -->
+					    	</div>
+		     			</div>
+		    		<!-- TemplateEndEditable -->
+		    		<p class="wsmarkedexp"><!--LOC-->Eventuell frei gewordene Plätze werden Ihnen zugewiesen.<!--LOC--></p>
+		    	<!-- TemplateEndIf -->
+	    		
+		     	<!-- TemplateBeginIf cond="v_oworkshops" -->
+		     		<h3 class="wstitle"><!--LOC-->Optionale Workshops:<!--LOC--></h3>
+		     		<!-- TemplateBeginEditable name="multiply|v_oworkshops" -->
+		     			<div class="wsliste">
+		     				<div class="wsitem wsshort">@@Short@@</div>
+		     				<div class="wsitem wsltitle">@@Content@@</div>
+		     				<div class="wsitem wstimes">
+						     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+			     					@@Start@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+			     					@@Starttime@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+			     					 - @@Stop@@
+						    	<!-- TemplateEndIf -->
+						     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+							     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+				     					 - 
+							    	<!-- TemplateEndIf -->
+						    		@@Stoptime@@
+						    	<!-- TemplateEndIf -->
+					    	</div>
+		     			</div>
+		    		<!-- TemplateEndEditable -->
+		    	<!-- TemplateEndIf -->
+				
+				<p class="wsoblig">&nbsp;</p>
+				
+				<p class="wsoblig"><!--LOC-->EV_FEEDBACKINFO<!--LOC--></p>
+	    	
+	    		<p class="wsoblig"><!--LOC-->Bitte beachten Sie, dass alle Anmeldungen als verbindlich zu betrachten sind. Eventuelle Änderungen teilen Sie uns bitte rechtzeitig mit.<!--LOC--></p>
+	    		
+	    	</div>
+    		
+    	<!-- TemplateEndIf -->
+    	
+   		<form class="acenter" name="done" action="" method="post">
+    		<input id="feedback_print" class="afeedback" type="submit" onclick="window.print();return false;" value="#!--LOC--#Drucken#!--LOC--#" />
+    		<input id="feedback_new" class="afeedback" type="submit" value="#!--LOC--#Neue Anmeldung#!--LOC--#" />
+   		</form>
+   		
+    </div>
+    
+    <!-- TemplateEndIf -->
+    
+    <div id="foot" class="center">
+        <p>&copy; <a href="http://www.provinz.bz.it/bildung-sprache/didaktik-beratung/"><!--LOC-->Pädagogische Abteilung - Bozen<!--LOC--></a> - 
+		<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script>
+		| E-Mail: <a href="mailto:pa@provinz.bz.it">pa@provinz.bz.it</a> - <a href="http://www.blikk.it">www.blikk.it</a></p>
+    	<div class="footlogo"></div>
+    </div>
+
+</body>
+</html>

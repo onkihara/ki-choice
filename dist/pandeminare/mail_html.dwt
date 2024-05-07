@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><!-- TemplateBeginEditable name="v_evet::Title" -->Title<!-- TemplateEndEditable --></title>
+</head>
+<body style="width:550px;">
+	<div style="width:550px; margin:auto; font-family:Verdana,Arial;">
+		<div style="width:100%; height:80px; text-align:center; background-color:#2E5C82;">
+			<p>&nbsp;</p>
+			<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+				<h1 style="font-size:1.2em;color:#FF9900;">
+					<!--LOC-->Ihre Anmeldung zu<!--LOC--> "<!-- TemplateBeginEditable name="v_event::Title" -->title<!-- TemplateEndEditable -->"
+				</h1>
+			<!-- TemplateEndIf -->
+			
+			<!-- TemplateBeginIf cond="v_mailtype==info" -->
+				<h1 style="font-size:1.2em;color:#FF9900;">
+					<!--LOC-->Anmeldung zu<!--LOC--> "<!-- TemplateBeginEditable name="v_event::Title" -->title<!-- TemplateEndEditable -->"
+				</h1>
+			<!-- TemplateEndIf -->
+			<p>&nbsp;</p>
+		</div>
+		<div style="padding:10px; font-size:13px;">
+		
+			<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+				<p><!--LOC-->Vielen Dank für Ihr Interesse an<!--LOC--> "<!-- TemplateBeginEditable name="v_event::Title" --><!-- TemplateEndEditable -->".</p>
+				<h3><!--LOC-->Veranstaltungsdaten<!--LOC-->:</h3>
+				<p><!--LOC-->Veranstaltung<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Title" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateBeginIf cond="v_event::Address" -->
+					<p><!--LOC-->Adresse<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Address" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateEndIf -->
+				<!-- TemplateBeginIf cond="v_event::Place" -->
+					<p><!--LOC-->Ort<!--LOC-->: <!-- TemplateBeginEditable name="v_event::Place" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateEndIf -->
+				<!-- TemplateBeginIf cond="v_latitude" -->
+					<p><!--LOC-->GPS-Koordinaten<!--LOC-->: <!--LOC-->Breitengrad<!--LOC-->: <!-- TemplateBeginEditable name="v_latitude" --><!-- TemplateEndEditable --> <!--LOC-->Längengrad<!--LOC-->: <!-- TemplateBeginEditable name="v_longitude" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateEndIf -->
+			<!-- TemplateEndIf -->
+				
+			<!-- TemplateBeginIf cond="v_mailtype==info" -->
+				<!-- TemplateBeginIf cond="v_user::Varopt==de||literate" -->
+					
+				<!-- TemplateEndIf -->
+				<h3><!--LOC-->Anmeldedaten<!--LOC-->:</h3>
+				<p>&nbsp;</p>
+				<p><!--LOC-->Name<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Name" --><!-- TemplateEndEditable --></p>
+				<p><!--LOC-->Vorname<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Firstname" --><!-- TemplateEndEditable --></p>
+				<p><!--LOC-->E-Mail<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Email" --><!-- TemplateEndEditable --></p>
+				<p><!--LOC-->Direktion / Organisation<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Organization" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateBeginIf cond="v_user::Telefon" -->
+					<p><!--LOC-->Telefon<!--LOC-->: <!-- TemplateBeginEditable name="v_user::Telefon" --><!-- TemplateEndEditable --></p>
+				<!-- TemplateEndIf -->
+				<!-- TemplateBeginIf cond="v_user::Allowance" -->
+					<p><!--LOC-->Erlaubnis des oder der Vorgesetzten eingeholt<!--LOC--></p>
+				<!-- TemplateEndIf -->
+				
+			<!-- TemplateEndIf -->
+				
+			<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+				<p><!--LOC-->Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:<!--LOC--></p>
+			<!-- TemplateEndIf -->
+				
+	     	<!-- TemplateBeginIf cond="v_rworkshops" -->
+	     		<h3><!--LOC-->Gebuchte Workshops:<!--LOC--></h3>
+	     		<table style="font-size:13px; font-weight:bold; font-family:Verdana,Arial; width:100%">
+	     		<!-- TemplateBeginEditable name="multiply|v_rworkshops" -->
+	     			<tr>
+	     				<td>@@Short@@</td>
+	     				<td>@@Content@@</td>
+	     				<td>
+					     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+		     					@@Start@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+		     					@@Starttime@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+		     					 - @@Stop@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+			     					 - 
+						    	<!-- TemplateEndIf -->
+					    		@@Stoptime@@
+					    	<!-- TemplateEndIf -->
+				    	</td>
+	     			</tr>
+	    		<!-- TemplateEndEditable -->
+	    		</table>
+	    	<!-- TemplateEndIf -->
+	    		
+				
+	     	<!-- TemplateBeginIf cond="v_mworkshops" -->
+	     		<h3><!--LOC-->Auf Warteliste:<!--LOC--></h3>
+	     		<table style="font-size:12px; font-weight:bold;">
+	     		<!-- TemplateBeginEditable name="multiply|v_mworkshops" -->
+	     			<tr>
+	     				<td>@@Short@@</td>
+	     				<td>@@Content@@</td>
+	     				<td>
+					     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+		     					@@Start@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+		     					@@Starttime@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+		     					 - @@Stop@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+			     					 - 
+						    	<!-- TemplateEndIf -->
+					    		@@Stoptime@@
+					    	<!-- TemplateEndIf -->
+				    	</td>
+	     			</tr>
+	    		<!-- TemplateEndEditable -->
+	    		</table>
+	    	<!-- TemplateEndIf -->
+	    		
+				
+	     	<!-- TemplateBeginIf cond="v_oworkshops" -->
+	     		<h3><!--LOC-->Optionale Workshops:<!--LOC--></h3>
+	     		<table style="font-size:12px; font-weight:bold;">
+	     		<!-- TemplateBeginEditable name="multiply|v_oworkshops" -->
+	     			<tr>
+	     				<td>@@Short@@</td>
+	     				<td>@@Content@@</td>
+	     				<td>
+					     	<!-- TemplateBeginIf cond="@@Start@@==true||literate" -->
+		     					@@Start@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Starttime@@==true||literate" -->
+		     					@@Starttime@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stop@@==true||literate" -->
+		     					 - @@Stop@@
+					    	<!-- TemplateEndIf -->
+					     	<!-- TemplateBeginIf cond="@@Stoptime@@==true||literate" -->
+						     	<!-- TemplateBeginIf cond="@@Stop@@==false||literate" -->
+			     					 - 
+						    	<!-- TemplateEndIf -->
+					    		@@Stoptime@@
+					    	<!-- TemplateEndIf -->
+				    	</td>
+	     			</tr>
+	    		<!-- TemplateEndEditable -->
+	    		</table>
+	    	<!-- TemplateEndIf -->
+	    		
+			<!-- TemplateBeginIf cond="v_mailtype==feedback" -->
+				<p>
+					<!--LOC-->EV_MAILINFO<!--LOC--> 
+				</p>
+				<p>
+					<!--LOC-->Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:<!--LOC--> 
+					<!-- TemplateBeginEditable name="replace|addr|v_mailorganizator" --><a href="mailto:@@addr@@">@@addr@@</a><!-- TemplateEndEditable -->
+				</p>
+				<p><!--LOC-->Mit freundlichen Grüßen<!--LOC--><br />
+					"<!-- TemplateBeginEditable name="v_event::Title" -->title<!-- TemplateEndEditable -->"
+				</p>
+			<!-- TemplateEndIf -->
+				
+			<p><!--LOC-->P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung:<!--LOC--> 
+			<!-- TemplateBeginEditable name="replace|addr|v_mailorganization" --><a href="mailto:@@addr@@">@@addr@@</a><!-- TemplateEndEditable -->.</p>
+			
+		</div>
+		<div style="width:100%;text-align:center; background-color:#2E5C82; font-size:13px">
+			<p>&nbsp;</p>
+			<p>
+				<a href="http://www.bildung.suedtirol.it" target="_blank" style="color:#FF9900;">&copy; <!--LOC-->Pädagogische Abteilung - Bozen<!--LOC--></a>
+			</p>
+			<p>&nbsp;</p>
+		</div>
+	</div>
+</body>
+</html>

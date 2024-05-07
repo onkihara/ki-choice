@@ -1,0 +1,328 @@
+﻿#lang:en-EN
+#id:44
+#name:English
+#flag:../blikk/blikk_css/kids/navi/flags/en.gif
+#country:EN
+#version:1.1-20100122
+#charset:UTF-8
+
+# ------------------------------------------
+
+#sectstart:mail_html.dwt
+
+msgid "Ihre Anmeldung zu"
+msgstr "Your Registration"
+
+msgid "Anmeldung zu"
+msgstr "Registration for"
+
+msgid "Vielen Dank für Ihr Interesse an"
+msgstr "Thank you for your registering to the conference"
+
+msgid "Veranstaltungsdaten"
+msgstr "Event information"
+
+msgid "Veranstaltung"
+msgstr "Event"
+
+msgid "Adresse"
+msgstr "Address"
+
+msgid "Ort"
+msgstr "Venue"
+
+msgid "GPS-Koordinaten"
+msgstr "GPS coordinates"
+
+msgid "Breitengrad"
+msgstr "Latitude"
+
+msgid "Längengrad"
+msgstr "Longitude"
+
+msgid "Anmeldedaten"
+msgstr "Registration information"
+
+msgid "Name"
+msgstr "Surname"
+
+msgid "Vorname"
+msgstr "Name"
+
+msgid "Geburtsdatum"
+msgstr "Date of birth"
+
+msgid "E-Mail"
+msgstr "Email address"
+
+msgid "Organisation / Schule"
+msgstr "School of origin / Institution"
+
+msgid "Telefon"
+msgstr "Phone number"
+
+msgid "Erlaubnis des oder der Vorgesetzten eingeholt"
+msgstr "Permission to attend this event"
+
+msgid "Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:"
+msgstr "You have registered for the following workshops:"
+
+msgid "Gebuchte Workshops:"
+msgstr "Booked workshops:"
+
+msgid "Auf Warteliste:"
+msgstr "Waiting list:"
+
+msgid "Optionale Workshops:"
+msgstr "Optional workshops:"
+
+msgid "Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:"
+msgstr "For any questions or changes to your registration please contact:"
+
+msgid "Mit freundlichen Grüßen"
+msgstr "Kind regards"
+
+msgid "P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung:"
+msgstr "P. S.: Please contact us if you are not the intended addressee of this email:"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Pädagogische Abteilung in der Deutschen Bildungsdirektion - Bozen"
+
+#sectend:mail_html.dwt
+
+# ------------------------------------------
+
+#sectstart:mail_text.dwt
+
+msgid "Ihre Anmeldung zu"
+msgstr "Your Registration"
+
+msgid "Anmeldung zu"
+msgstr "Registration for"
+
+msgid "Vielen Dank für Ihr Interesse an"
+msgstr "Thank you for your interest in"
+
+msgid "Veranstaltungsdaten"
+msgstr "Event information"
+
+msgid "Veranstaltung"
+msgstr "Event"
+
+msgid "Adresse"
+msgstr "Address"
+
+msgid "Ort"
+msgstr "Venue"
+
+msgid "GPS-Koordinaten"
+msgstr "GPS coordinates"
+
+msgid "Breitengrad"
+msgstr "Latitude"
+
+msgid "Längengrad"
+msgstr "Longitude"
+
+msgid "Anmeldedaten"
+msgstr "Registration information"
+
+msgid "Name"
+msgstr "Surname"
+
+msgid "Vorname"
+msgstr "Name"
+
+msgid "Geburtsdatum"
+msgstr "Date of birth"
+
+msgid "E-Mail"
+msgstr "Email address"
+
+msgid "Organisation / Schule"
+msgstr "School of origin / Institution"
+
+msgid "Telefon"
+msgstr "Phone number"
+
+msgid "Erlaubnis des oder der Vorgesetzten eingeholt"
+msgstr "Permission to attend this event"
+
+msgid "Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:"
+msgstr "You have registered for the following workshops:"
+
+msgid "Gebuchte Workshops:"
+msgstr "Booked workshops:"
+
+msgid "Auf Warteliste:"
+msgstr "Waiting list:"
+
+msgid "Optionale Workshops:"
+msgstr "Optional workshops:"
+
+msgid "Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:"
+msgstr "For any questions or changes to your registration please contact:"
+
+msgid "Mit freundlichen Grüßen"
+msgstr "Kind regards"
+
+msgid "P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung:"
+msgstr "P. S.: Please contact us if you are not the intended addressee of this email:"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Pädagogische Abteilung in der Deutschen Bildungsdirektion - Bozen"
+
+#sectend:mail_text.dwt
+
+# ------------------------------------------
+
+#sectstart:main.dwt
+
+msgid "Anmeldung zur Tagung"
+msgstr "Online Registration"
+
+msgid "Die Anmeldungen starten ab"
+msgstr "Online registration starts on"
+
+msgid "Anmeldeschluss:"
+msgstr "Registration deadline:"
+
+msgid "Achtung: Ihre Angaben sind unvollständig oder konnten nicht verarbeitet werden. Bitte überprüfen Sie die rot markierten Eingaben."
+msgstr "The data submitted is incomplete and could not be processed. Please check the parts shown in red."
+
+msgid "Achtung: Sie haben keinen Workshop gewählt. Bitte überprüfen Sie Ihre Angaben."
+msgstr "You have not selected any workshop. Please check the data you have provided."
+
+msgid "Bitte geben Sie hier Ihre Anmeldedaten ein:"
+msgstr "Please enter your details below:"
+
+msgid "Pflichtfeld"
+msgstr "Mandatory input"
+
+msgid "Nachname"
+msgstr "Surname"
+
+msgid "Vorname"
+msgstr "Name"
+
+msgid "Geburtsdatum"
+msgstr "Date of birth"
+
+msgid "Direktion / Organisation"
+msgstr "School of origin / Institution"
+
+msgid "Straße und Nr."
+msgstr "Address (street and house number)"
+
+msgid "PLZ und Ort"
+msgstr "Postal code and town/village"
+
+msgid "Unterrichtsfach / Berufskategorie"
+msgstr "Subjects"
+
+msgid "E-Mail"
+msgstr "Email address"
+
+msgid "Telefonnummer"
+msgstr "Phone number"
+
+msgid "Ich habe, falls notwendig, die Erlaubnis zur Teilnahme eingeholt und erhalten."
+msgstr "I have asked for and obtained permission to attend this event (if necessary)."
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Referate und Workshops"
+msgstr "Plenaries and Workshops"
+
+msgid "Nr."
+msgstr "No"
+
+msgid "Zeit"
+msgstr "Time"
+
+msgid "Tag"
+msgstr "Day"
+
+msgid "Monat"
+msgstr "Month"
+
+msgid "Jahr"
+msgstr "Year"
+
+msgid "Anmelden"
+msgstr "Register"
+
+msgid "Plätze"
+msgstr "Free"
+
+msgid "Belegt"
+msgstr "Booked"
+
+msgid "Auf Warteliste"
+msgstr "Waiting List"
+
+msgid "Achtung: Diese Workshops können nicht gleichzeitig gebucht werden!"
+msgstr "Error: These workshops cannot be booked simultaneously!"
+
+msgid "Achtung: Diese Workshops müssen zusammen belegt werden!"
+msgstr "Error: These workshops can only be booked simultaneously!"
+
+msgid "Die Anmeldefrist für die Veranstaltung ist abgelaufen!"
+msgstr "The period of registration for this event has expired!"
+
+msgid "Ausgebucht"
+msgstr "Fully booked"
+
+msgid "Ich nehme die Datenschutzerklärung zur Kenntnis!"
+msgstr "I have read and accept the privacy policy!"
+
+msgid "EV_CONTACTS"
+msgstr " "
+
+msgid "EV_DISCLAIMER"
+msgstr "<h2>Datenschutz-Hinweis</h2><p>Information gemäß Art. 13 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016</p><p><strong>Rechtsinhaber für die Datenverarbeitung</strong> ist die Pädagogische Abteilung in der Deutschen Bildungsdirektion der Autonomen Provinz Bozen mit Sitz in Bozen (Italien), Amba-Alagi-Str. 10, PLZ 39100, Tel.: (0039) 0471 417221, E-Mail: <a href="mailto:pa@provinz.bz.it">pa@provinz.bz.it</a>, PEC: <a href="mailto:pid@pec.prov.bz.it">pid@pec.prov.bz.it</a></p><p><strong>Externer Auftragsverarbeiter</strong> für die technische Bereitstellung sind die ICT-Services der UNI-Bozen/EURAC.</p><p><strong>Datenschutzbeauftragte (DSB):</strong> Die Kontaktdaten der DSB der Autonomen Provinz Bozen sind folgende: Autonome Provinz Bozen, Landhaus 1, Organisationsamt, Silvius-Magnago-Platz Nr. 1, 39100 Bozen; E-Mail: <a href="mailto:dsb@provinz.bz.it">dsb@provinz.bz.it</a>, PEC: <a href="mailto:rpd_dsb@pec.prov.bz.it">rpd_dsb@pec.prov.bz.it</a></p><p><strong>Zwecke der Verarbeitung:</strong> Die übermittelten Daten werden vom dazu befugten Landespersonal, auch in elektronischer Form, ausschließlich für institutionelle Zwecke in Zusammenhang mit dem Verwaltungsverfahren gespeichert, verarbeitet und genutzt, zu dessen Abwicklung sie angegeben wurden. Die Mitteilung der Daten ist freiwillig, aber unerlässlich, damit die beantragten Verwaltungsaufgaben erledigt werden können.</p><p><strong>Mitteilung und Datenempfänger:</strong> Die Daten können Rechtsträgern mitgeteilt werden, die Dienstleistungen in Zusammenhang mit der Wartung und Verwaltung des informationstechnischen Systems der Pädagogischen Abteilung erbringen.</p><p><strong>Dauer:</strong> Die Daten werden für die Dauer des beanspruchten Dienstes oder bis zum Antrag deren Löschung seitens des Nutzers gespeichert.</p><p><strong>Rechte der betroffenen Person:</strong> Gemäß den geltenden Bestimmungen erhält die betroffene Person auf Antrag jederzeit Zugang zu den sie betreffenden Daten und es steht ihr das Recht auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten zu; sofern die gesetzlichen Voraussetzungen gegeben sind, kann sie sich der Verarbeitung widersetzen oder die Löschung der Daten oder die Einschränkung der Verarbeitung verlangen. Im letztgenannten Fall dürfen die personenbezogenen Daten, die Gegenstand der Einschränkung der Verarbeitung sind, von ihrer Speicherung abgesehen, nur mit Einwilligung der betroffenen Person, zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen des Verantwortlichen, zum Schutz der Rechte Dritter oder aus Gründen eines wichtigen öffentlichen Interesses verarbeitet werden.</p><p>Der entsprechende Antrag ist an <a href="mailto:pa@provinz.bz.it">pa@provinz.bz.it</a> zur richten.</p><p><strong>Rechtsbehelfe:</strong> Erhält die betroffene Person auf ihren Antrag innerhalb von 30 Tagen nach Eingang keine Rückmeldung, kann sie Beschwerde bei der Datenschutzbehörde oder Rekurs bei Gericht einlegen; diese Frist kann um weitere 60 Tage verlängert werden, wenn dies wegen der Komplexität oder wegen der hohen Anzahl von Anträgen erforderlich ist.</p><p>Die betroffene Person hat Einsicht in die Information über die Verarbeitung der personenbezogenen Daten genommen.</p>"
+
+msgid "Entschuldigung! Aufgrund technischer Probleme kann Ihre Registrierung zur Zeit leider nicht entgegengenommen werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal."
+msgstr "We are sorry. Your registration cannot be processed at the moment due to technical problems. Please try again later."
+
+msgid "Ihre Registrierung enthält nicht alle notwendigen Teile - bitte überprüfe Sie Ihre Angaben."
+msgstr "Your registration is incomplete - please check the inserted data."
+
+msgid "Achtung: Sie haben das Formular schon abgeschickt! Für eine weitere Anmeldung benutzen Sie bitte den Knopf "Neue Anmeldung"."
+msgstr "Your registration has been sent already. For a further registration please choose the button "New registration"."
+
+msgid "Vielen Dank für Ihr Ihre Anmeldung zu"
+msgstr "Thank you for your registration"
+
+msgid "Sie haben sich erfolgreich für die angegebenen Workshops registriert und erhalten in Kürze eine E-Mail mit der Bestätigung Ihrer Registrierung: "
+msgstr "You have successfully registered for this event. You will shortly receive an email confirming your registration."
+
+msgid "Gebuchte Workshops:"
+msgstr "Booked workshops:"
+
+msgid "Auf der Warteliste:"
+msgstr "On waiting list:"
+
+msgid "Eventuell frei gewordene Plätze werden Ihnen zugewiesen."
+msgstr "You will be informed should places become available."
+
+msgid "Optionale Workshops:"
+msgstr "Optional workshops:"
+
+msgid "Bitte beachten Sie, dass alle Anmeldungen als verbindlich zu betrachten sind. Eventuelle Änderungen teilen Sie uns bitte rechtzeitig mit."
+msgstr "Please note that your registration is binding. Please inform us about any changes."
+
+msgid "Drucken"
+msgstr "Print"
+
+msgid "Neue Anmeldung"
+msgstr "New registration"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Pädagogische Abteilung in der Deutschen Bildungsdirektion - Bozen"
+
+msgid "EV_CONDITION"
+msgstr " "
+
+#sectend:main.dwt

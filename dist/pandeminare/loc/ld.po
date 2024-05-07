@@ -1,0 +1,307 @@
+#lang:ld-IT
+#id:39001
+#name:Ladin
+#flag:/blikk/blikk_css/kids/navi/flags/ld.gif
+#country:IT
+#charset:UTF-8
+#version:1.3-20110426
+
+# ------------------------------------------
+
+#sectstart:mail_html.dwt
+
+msgid "Ihre Anmeldung zu"
+msgstr "Osta iscriziun a"
+
+msgid "Anmeldung zu"
+msgstr "Iscriziun a"
+
+msgid "Vielen Dank für Ihr Interesse an"
+msgstr "Dilan dl interès por"
+
+msgid "Veranstaltungsdaten"
+msgstr "Dać dla manifestaziun"
+
+msgid "Veranstaltung"
+msgstr "Manifestaziun"
+
+msgid "Adresse"
+msgstr "Misciun"
+
+msgid "Ort"
+msgstr "Post"
+
+msgid "GPS-Koordinaten"
+msgstr "Coordinates-GPS"
+
+msgid "Breitengrad"
+msgstr "Degrà de larghëza"
+
+msgid "Längengrad"
+msgstr "Degrà de lunghëza"
+
+msgid "Anmeldedaten"
+msgstr "Dać de iscriziun"
+
+msgid "Name"
+msgstr "Cognom"
+
+msgid "Vorname"
+msgstr "Inom"
+
+msgid "Geburtsdatum"
+msgstr "Data de nasciüda"
+
+msgid "E-Mail"
+msgstr "Misciun dla e-mail"
+
+msgid "Organisation / Schule"
+msgstr "Organisaziun/scora"
+
+msgid "Telefon"
+msgstr "Telefonn"
+
+msgid "Erlaubnis des oder der Vorgesetzten eingeholt"
+msgstr "Autorisaziun dl/dla superiur/a"
+
+msgid "Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:"
+msgstr "I Ves ëis scrit ite a/ëis prenotè chisc laboratori:"
+
+msgid "Gebuchte Workshops:"
+msgstr "Laborators prenotà:"
+
+msgid "Auf Warteliste:"
+msgstr "Sön lista da aspeté:"
+
+msgid "Optionale Workshops:"
+msgstr "Laboratori opzionai:"
+
+msgid "Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:"
+msgstr "I Ves periun de menè domandes, mudaziuns y desdites a chësta misciun:"
+
+msgid "Mit freundlichen Grüßen"
+msgstr "Cun de bi salüć"
+
+msgid "P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung:"
+msgstr "P.S: sce chësta e-mail è gnüda menada adinfal,  Ves periunse de la menè zoruch al mitënt:"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Inovaziun y Consulënza - Balsan"
+
+#sectend:mail_html.dwt
+
+# ------------------------------------------
+
+#sectstart:mail_text.dwt
+
+msgid "Anmeldung zu"
+msgstr "Iscriziun a"
+
+msgid "Vielen Dank für Ihr Interesse an"
+msgstr "Dilan dl interès por"
+
+msgid "Veranstaltungsdaten"
+msgstr "Dać dla manifestaziun"
+
+msgid "Veranstaltung"
+msgstr "Manifestaziun"
+
+msgid "Adresse"
+msgstr "Misciun"
+
+msgid "Ort"
+msgstr "Post"
+
+msgid "GPS-Koordinaten"
+msgstr "Coordinates-GPS"
+
+msgid "Breitengrad"
+msgstr "Degrà de larghëza"
+
+msgid "Längengrad"
+msgstr "Degrà de lunghëza"
+
+msgid "Anmeldedaten"
+msgstr "Dać de iscriziun"
+
+msgid "Name"
+msgstr "Cognom"
+
+msgid "Vorname"
+msgstr "Inom"
+
+msgid "Geburtsdatum"
+msgstr "Data de nasciüda"
+
+msgid "E-Mail"
+msgstr "Misciun dla e-mail"
+
+msgid "Organisation / Schule"
+msgstr "Organisaziun/scora"
+
+msgid "Telefon"
+msgstr "Telefonn"
+
+msgid "Erlaubnis der Vorgesetzten eingeholt"
+msgstr "Autorisaziun dl/dla superiur/a"
+
+msgid "Sie haben sich für folgende Workshops angemeldet bzw. vorgemerkt:"
+msgstr "I Ves ëis scrit ite a/ëis prenotè chisc laboratori:"
+
+msgid "Gebuchte Workshops:"
+msgstr "Laborators prenotà:"
+
+msgid "Auf Warteliste:"
+msgstr "Sön lista da aspeté:"
+
+msgid "Optionale Workshops:"
+msgstr "Laboratori opzionai:"
+
+msgid "Bitte richten Sie Anfragen, Änderungswünsche und Absagen an folgende Adresse:"
+msgstr "I Ves periun de menè domandes, mudaziuns y desdites a chësta misciun:"
+
+msgid "Mit freundlichen Grüßen"
+msgstr "Cun de bi salüć"
+
+msgid "P. S.: Falls diese E-Mail irrtümlich zugestellt worden ist, bitten wir um Rückmeldung an:"
+msgstr "P.S: sce chësta e-mail è gnüda menada adinfal,  Ves periunse de la menè zoruch al mitënt:"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Inovaziun y Consulënza - Balsan"
+
+#sectend:mail_text.dwt
+
+# ------------------------------------------
+
+#sectstart:main.dwt
+
+msgid "Anmeldung zur Tagung"
+msgstr "Iscriziun al convëgn"
+
+msgid "Achtung: Ihre Angaben sind unvollständig oder konnten nicht verarbeitet werden. Bitte überprüfen Sie die rot markierten Eingaben."
+msgstr "Atenziun: Üsc dać n’é nia compleć o  ne po nia gnì adorà. I Ves periun de ćiarè do  les perts scrites a cöce."
+
+msgid "Achtung: Sie haben keinen Workshop gewählt. Bitte überpfrüfen Sie Ihre Angaben."
+msgstr "Atenziun: i nʻëis chirì fora degun laboratore. I Ves periun de ćiarè do."
+
+msgid "Bitte geben Sie hier Ihre Anmeldedaten ein:"
+msgstr "I Ves periun de porté ite chilò Üsc dać:"
+
+msgid "Nachname"
+msgstr "Cognom"
+
+msgid "Vorname"
+msgstr "Inom"
+
+msgid "Geburtsdatum"
+msgstr "Data de nasciüda"
+
+msgid "Direktion / Organisation"
+msgstr "Direziun/ Organisaziun"
+
+msgid "Straße und Nr."
+msgstr "Strada y numer"
+
+msgid "PLZ und Ort"
+msgstr "Codesc postal y post"
+
+msgid "E-Mail"
+msgstr "E-mail"
+
+msgid "Telefonnummer"
+msgstr "Numer de telefonn"
+
+msgid "Ich habe, falls notwendig, die Erlaubnis zur Teilnahme eingeholt und erhalten."
+msgstr "I à damanè do y ćiafè, sce al é debojëgn, l’autorisaziun da tó pert al convëgn."
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Workshops"
+msgstr "Laborators"
+
+msgid "Nr."
+msgstr "Num."
+
+msgid "Zeit"
+msgstr "Orar"
+
+msgid "Tag"
+msgstr "Dé"
+
+msgid "Monat"
+msgstr "Mëis"
+
+msgid "Jahr"
+msgstr "Ann"
+
+msgid "Anmelden"
+msgstr "Scrì ite"
+
+msgid "Plätze"
+msgstr "Posć"
+
+msgid "Belegt"
+msgstr "Plëgn"
+
+msgid "Auf Warteliste"
+msgstr "Lista da aspeté"
+
+msgid "Achtung: Diese Workshops können nicht gleichzeitig gebucht werden!"
+msgstr "Atenziun: chisc laborators ne po nia gnì prenotà tl medemo tëmp!"
+
+msgid "Achtung: Diese Workshops müssen zusammen belegt werden!"
+msgstr "Atenziun: chisc laboratori mëss gnì prenotà adöm!"
+
+msgid "Die Anmeldefrist für die Veranstaltung ist abgelaufen!"
+msgstr "Le terminn por les iscriziuns a chësta manifestaziun é stlüt!"
+
+msgid "Ausgebucht"
+msgstr "Plëgn"
+
+msgid "Ich nehme folgende Datenschutzerklärung zur Kenntnis:"
+msgstr "I toli a conescënza les normatives sön la privacy suandëntes:"
+
+msgid "EV_DISCLAIMER"
+msgstr "Comunicaziun aladô dl articul 13 dl decret legislatif di 30 de jügn 2003, n. 196.<br />I dać menà ite gnarà elaurà dal ufize Inovaziun y Consulënza dl Departimënt istruziun y formaziun por le grup linguistich todësch y da sü partners organisatifs, te süa funziun de titolars di dać, inće te forma eletronica. Por chësta elauraziun è responsabl le Diretur dl ufize Inovaziun y Consulënza dl Departimënt istruziun y formaziun por le grup linguistich todësch. Aladô di articui 7 dl decret legislatif n. 196/2003 po le candidat damanè l’azès a sü dać, po damanè che ai vëgnes mudà o integrà y, tan inant che la lege le pormët, che i  dać vëgnes anulà o blocà."
+
+msgid "Entschuldigung! Aufgrund technischer Probleme kann Ihre Registrierung zur Zeit leider nicht entgegengenommen werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt noch einmal."
+msgstr "Pordenede! Por gauja de problems tecnics ne po Osta iscriziun por le momënt nia gnì azetada. I Ves periun de porvè plü tert."
+
+msgid "Ihre Registrierung enthält nicht alle notwendigen Teile - bitte überprüfe Sie Ihre Angaben."
+msgstr "Osta registraziun ne contëgn nia düć i dać che o ester. I Ves periun de controlé."
+
+msgid "Achtung: Sie haben das Formular schon abgeschickt! Für eine weitere Anmeldung benutzen Sie bitte den Knopf "Neue Anmeldung"."
+msgstr "Atenziun: Os ëis bele menè ite le formular. Por fa ćaimò na iscriziun Ves periunse de druché sön "iscriziun nöia"."
+
+msgid "Vielen Dank für Ihr Ihre Anmeldung zu"
+msgstr "Dilan de Osta iscriziun a"
+
+msgid "Sie haben sich erfolgreich für die angegebenen Workshops registriert und erhalten in Kürze eine E-Mail mit der Bestätigung Ihrer Registrierung: "
+msgstr "Osta registraziun è gnüda tuta sö. I ciafarëis na e-mail de confërmaziun: "
+
+msgid "Gebuchte Workshops:"
+msgstr "Laborators prenotà:"
+
+msgid "Auf der Warteliste:"
+msgstr "Sön la lista da aspeté:"
+
+msgid "Eventuell frei gewordene Plätze werden Ihnen zugewiesen."
+msgstr "Al Ves gnarà assegné posć che é gnüs lëdi."
+
+msgid "Optionale Workshops:"
+msgstr "Laborators opzionai:"
+
+msgid "Bitte beachten Sie, dass alle Anmeldungen als verbindlich zu betrachten sind. Eventuelle Änderungen teilen Sie uns bitte rechtzeitig mit."
+msgstr "Dötes les iscriziuns è vincolëntes. I Ves periun de nes lascè alsavëi adora assà vigni mudaziun."
+
+msgid "Drucken"
+msgstr "Stampè"
+
+msgid "Neue Anmeldung"
+msgstr "Iscriziun nöia"
+
+msgid "Bereich Innovation und Beratung - Bozen"
+msgstr "Inovaziun y Consulënza - Balsan"
+
+#sectend:main.dwt

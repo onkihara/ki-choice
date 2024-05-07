@@ -3,10 +3,25 @@
     	<div :style="{ width : width+'px', height : height+'px' }" id="paper" ref="paper"></div>
 
         <div class="controls">
-            <button @click="isAuto = ! isAuto">Auto</button>
-            <p v-if="isAuto">Size / Border Radius</p>
-            <input v-if="isAuto" type="text" v-model="radiusratio">
-            <button v-if="isAuto" @click="autoRun">Run</button>
+            <button @click="isTraining = ! isTraining">Training</button>
+            <div class="control" v-if="isTraining">
+                <span class="rect"></span>
+                <input type="text" v-model="training_rect">
+                <span class="round"></span>
+                <input type="text" v-model="training_round">
+                <span class="output">Epoch: {{ epoch }}</span>
+                <span class="output">Parameter: <span>{{ training_radiusratio }}</span></span>
+                <button class="run" @click="autoTrain">Train</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button @click="isAuto = ! isAuto">Parameter</button>
+            <div class="control" v-if="isAuto">
+                <p>Size / Border Radius</p>
+                <input type="text" v-model="radiusratio">
+                <button class="run" @click="autoRun">Run</button>
+            </div>
         </div>
 
     </div>
@@ -52,7 +67,17 @@ export default {
             actrect : null,
             debug : false,
             isAuto : false,
-            radiusratio : ''
+            isTraining : false,
+            radiusratio : '',
+            autorunround : 0,
+            training_radiusratio : '-',
+            training_round : '',
+            training_rect : '',
+            ratio : 0,
+            prev_ratio : 0,
+            ratio_bottom : 2,
+            ratio_top : 20,
+            epoch : 0,
         }
     },
 
@@ -76,13 +101,15 @@ export default {
                 .attr('fill-opacity',BASKETOPACITY)
                 .attr('stroke-width',BORDERWIDTH)
                 .data('counter',0)
-                .data('pos',{ x : COUNTERMARGIN, y : COUNTERMARGIN}))
+                .data('pos',{ x : COUNTERMARGIN, y : COUNTERMARGIN})
+                .data('name','rect'))
             this.baskets.push(this.paper.rect( BASKETWIDTHRATIO * this.paper.width,upperHeight, BASKETWIDTHRATIO * this.paper.width, lowerHeight)
                 .attr('fill','lightyellow')
                 .attr('fill-opacity',BASKETOPACITY)
                 .attr('stroke-width',BORDERWIDTH)
                 .data('counter',0)
-                .data('pos',{ x : COUNTERMARGIN, y : COUNTERMARGIN}))
+                .data('pos',{ x : COUNTERMARGIN, y : COUNTERMARGIN})
+                .data('name','round'))
             // legend
             let counter = 0
             this.baskets.forEach((basket) => {
@@ -124,11 +151,13 @@ export default {
 
     	onStart(x, y) {
             this.actrect = this.paper.getElementByPoint(x,y)
+            if (! this.actrect) return
     		this.startX = this.actrect.attr('x')
     		this.startY = this.actrect.attr('y')
     	},
 
     	onMove(dx, dy, x, y) {
+            if (! this.actrect) return
             if (this.actrect.data('done')) {
                 return
             }
@@ -146,6 +175,7 @@ export default {
     	},
 
     	onComplete() {
+            if (! this.actrect) return
             if ( ! this.actrect.data('done')) {
                 this.resetOne(this.actrect)
             }
@@ -155,6 +185,7 @@ export default {
     	},
 
         onDraggedOver(el) {
+            if (! this.actrect) return
             this.baskets.forEach((basket) => {
                 if (el === basket && ! this.actrect.data('done')) {
                     // remove drag-events from origina
@@ -267,6 +298,7 @@ export default {
         autoRun() {
             const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
             let i = 0
+            this.autorunround = this.pieces.length
             this.paper.forEach((rect) => {
                 if (rect.data('type') != 'piece' || rect.data('done')) {
                     return
@@ -279,8 +311,68 @@ export default {
                         y : basketcenter.y,
                     }, ANIMDURATION, 'ease-in')
                     this.fillBasket(basket,rect)
+                    this.autorunround--
                 })
-            })           
+            })  
+        },
+
+        async autoTrain() {
+            let arect = 0
+            let result = ''
+            let around = parseInt(this.training_rect) + parseInt(this.training_round)
+            this.radiusratio = this.ratio_top
+            this.prev_ratio = this.ratio_top
+            this.epoch = 0;
+            while (result = this.calcError(around)) {
+                if (result == 'done') {
+                    this.autoRun()
+                    break;
+                }
+                this.epoch++;
+                this.training_radiusratio = parseInt(this.radiusratio * 100) / 100
+                this.autoRun()
+                await new Promise(r => setTimeout(r, 3000));
+                around = this.getBasketCount('round')
+                this.baskets.forEach((basket) => this.emptyBasket(basket))
+                await new Promise(r => setTimeout(r, 1500));
+            }
+        },
+
+        getBasketCount(name) {
+            let data
+            this.baskets.forEach((basket) => {
+                if (basket.data('name') == name) {
+                    data = basket.data('counter')
+                }
+            })
+            return data
+        },
+
+        calcError(around) {
+            const nrect = parseInt(this.training_rect)
+            const nround = parseInt(this.training_round)
+            if (this.radiusratio <= this.ratio_bottom) {
+                //console.log('overflow')
+                //return false
+            }
+            let diff = nround - around;
+            if (diff == 0) {
+                //console.log('done!')
+                return 'done'
+            }
+            this.prev_ratio /= 2
+            console.log(this.epoch,this.radiusratio,diff)
+            if (diff < 0) {
+                //console.log('r: ',this.prev_ratio)
+                this.radiusratio -= this.prev_ratio
+                return true
+            } else {
+                //console.log('underrun')
+                //console.log('r: ',this.prev_ratio)
+                this.radiusratio += this.prev_ratio
+                return true
+            }
+            return false
         },
 
         getBasketcenter(basket) {

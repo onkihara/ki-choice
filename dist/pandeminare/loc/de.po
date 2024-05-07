@@ -1,0 +1,32 @@
+﻿#lang:de-DE
+#id:49
+#name:Deutsch
+#flag:../blikk/blikk_css/kids/navi/flags/de.gif
+#country:DE 
+#charset:UTF-8
+#version:1.0-20110419
+
+# ------------------------------------------
+
+#sectstart:main.dwt
+
+msgid "EV_DISCLAIMER"
+msgstr "<h2>Datenschutz-Hinweis</h2><p>Information gemäß Art. 13 der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016</p><p><strong>Rechtsinhaber für die Datenverarbeitung</strong> ist die Pädagogische Abteilung in der Deutschen Bildungsdirektion der Autonomen Provinz Bozen mit Sitz in Bozen (Italien), Amba-Alagi-Str. 10, PLZ 39100, Tel.: (0039) 0471 417221, E-Mail: <a href="mailto:pa@provinz.bz.it">pa@provinz.bz.it</a>, PEC: <a href="mailto:pid@pec.prov.bz.it">pid@pec.prov.bz.it</a></p><p><strong>Externer Auftragsverarbeiter</strong> für die technische Bereitstellung sind die ICT-Services der UNI-Bozen/EURAC.</p><p><strong>Datenschutzbeauftragte (DSB):</strong> Die Kontaktdaten der DSB der Autonomen Provinz Bozen sind folgende: Autonome Provinz Bozen, Landhaus 1, Organisationsamt, Silvius-Magnago-Platz Nr. 1, 39100 Bozen; E-Mail: <a href="mailto:dsb@provinz.bz.it">dsb@provinz.bz.it</a>, PEC: <a href="mailto:rpd_dsb@pec.prov.bz.it">rpd_dsb@pec.prov.bz.it</a></p><p><strong>Zwecke der Verarbeitung:</strong> Die übermittelten Daten werden vom dazu befugten Landespersonal, auch in elektronischer Form, ausschließlich für institutionelle Zwecke in Zusammenhang mit dem Verwaltungsverfahren gespeichert, verarbeitet und genutzt, zu dessen Abwicklung sie angegeben wurden. Die Mitteilung der Daten ist freiwillig, aber unerlässlich, damit die beantragten Verwaltungsaufgaben erledigt werden können.</p><p><strong>Mitteilung und Datenempfänger:</strong> Die Daten können Rechtsträgern mitgeteilt werden, die Dienstleistungen in Zusammenhang mit der Wartung und Verwaltung des informationstechnischen Systems der Pädagogischen Abteilung erbringen.</p><p><strong>Dauer:</strong> Die Daten werden für die Dauer des beanspruchten Dienstes oder bis zum Antrag deren Löschung seitens des Nutzers gespeichert.</p><p><strong>Rechte der betroffenen Person:</strong> Gemäß den geltenden Bestimmungen erhält die betroffene Person auf Antrag jederzeit Zugang zu den sie betreffenden Daten und es steht ihr das Recht auf Berichtigung oder Vervollständigung unrichtiger bzw. unvollständiger Daten zu; sofern die gesetzlichen Voraussetzungen gegeben sind, kann sie sich der Verarbeitung widersetzen oder die Löschung der Daten oder die Einschränkung der Verarbeitung verlangen. Im letztgenannten Fall dürfen die personenbezogenen Daten, die Gegenstand der Einschränkung der Verarbeitung sind, von ihrer Speicherung abgesehen, nur mit Einwilligung der betroffenen Person, zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen des Verantwortlichen, zum Schutz der Rechte Dritter oder aus Gründen eines wichtigen öffentlichen Interesses verarbeitet werden.</p><p>Der entsprechende Antrag ist an <a href="mailto:pa@provinz.bz.it">pa@provinz.bz.it</a> zur richten.</p><p><strong>Rechtsbehelfe:</strong> Erhält die betroffene Person auf ihren Antrag innerhalb von 30 Tagen nach Eingang keine Rückmeldung, kann sie Beschwerde bei der Datenschutzbehörde oder Rekurs bei Gericht einlegen; diese Frist kann um weitere 60 Tage verlängert werden, wenn dies wegen der Komplexität oder wegen der hohen Anzahl von Anträgen erforderlich ist.</p><p>Die betroffene Person hat Einsicht in die Information über die Verarbeitung der personenbezogenen Daten genommen.</p>"
+
+msgid "EV_CONDITION"
+msgstr " "
+
+msgid "EV_CONTACTS"
+msgstr " "
+
+msgid "EV_MAILINFOTXT"
+msgstr " "
+
+msgid "EV_MAILINFO"
+msgstr " "
+
+msgid "EV_FEEDBACKINFO"
+msgstr " "
+
+#sectend:main.dwt
+
